@@ -1,0 +1,168 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5633,        158]
+NotebookOptionsPosition[      5317,        143]
+NotebookOutlinePosition[      5672,        159]
+CellTagsIndexPosition[      5629,        156]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"b", "[", "n", "]"}], ":=", " ", 
+   RowBox[{"Part", "[", 
+    RowBox[{
+     RowBox[{"RandomChoice", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         ".4513", ",", " ", ".3551", ",", " ", ".1307", ",", " ", ".0321", 
+          ",", " ", ".0259", ",", " ", ".0049"}], "}"}], " ", "\[Rule]", " ", 
+        
+        RowBox[{"{", 
+         RowBox[{
+         "\[Alpha]", ",", "\[Beta]", ",", " ", "\[Gamma]", ",", " ", 
+          "\[Delta]", ",", " ", "\[Lambda]", ",", " ", "\[Xi]"}], "}"}]}], 
+       ",", " ", "1"}], "]"}], ",", "1"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "[", "10", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"j", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"\[Omega]", "=", "1"}], ",", 
+   RowBox[{"\[Omega]", "\[LessEqual]", " ", "10"}], ",", 
+   RowBox[{"\[Omega]", "++"}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"b", "[", "n", "]"}], ":=", " ", 
+     RowBox[{"Part", "[", 
+      RowBox[{
+       RowBox[{"RandomChoice", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           ".4513", ",", " ", ".3551", ",", " ", ".1307", ",", " ", ".0321", 
+            ",", " ", ".0259", ",", " ", ".0049"}], "}"}], " ", "\[Rule]", 
+          " ", 
+          RowBox[{"{", 
+           RowBox[{
+           "\[Alpha]", ",", "\[Beta]", ",", " ", "\[Gamma]", ",", " ", 
+            "\[Delta]", ",", " ", "\[Lambda]", ",", " ", "\[Xi]"}], "}"}]}], 
+         ",", " ", "n"}], "]"}], ",", "n"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"i", ">", "2"}], ")"}], "||", 
+        RowBox[{"(", 
+         RowBox[{"j", ">", "3"}], ")"}], "||", 
+        RowBox[{"(", 
+         RowBox[{"k", ">", "0"}], ")"}]}], ")"}], ",", "\[IndentingNewLine]", 
+      
+      RowBox[{"Break", "[", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"b", "[", "\[Omega]", "]"}], "\[Equal]", " ", "\[Alpha]"}], 
+         ")"}], ",", " ", "\[IndentingNewLine]", 
+        RowBox[{"i", "=", 
+         RowBox[{"i", "+", "1"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"b", "[", "\[Omega]", "]"}], " ", "\[Equal]", " ", 
+            "\[Beta]"}], ")"}], ",", " ", "\[IndentingNewLine]", 
+          RowBox[{"j", "=", 
+           RowBox[{"j", "+", "1"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"b", "[", "\[Omega]", "]"}], " ", "\[Equal]", " ", 
+              "\[Gamma]"}], ")"}], ",", " ", "\[IndentingNewLine]", 
+            RowBox[{"k", "=", 
+             RowBox[{"k", "+", "1"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"b", "[", "\[Omega]", "]"}], " ", "\[Equal]", " ", 
+                "\[Delta]"}], ")"}], ",", " ", "\[IndentingNewLine]", 
+              RowBox[{"k", "=", 
+               RowBox[{"k", "+", "2"}]}], ",", "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"b", "[", "\[Omega]", "]"}], " ", "\[Equal]", " ", 
+                  "\[Lambda]"}], ")"}], ",", " ", "\[IndentingNewLine]", 
+                RowBox[{"k", " ", "=", " ", 
+                 RowBox[{"k", " ", "+", " ", "4"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"b", "[", "\[Omega]", "]"}], "\[Equal]", " ", 
+                    "\[Xi]"}], ")"}], ")"}], ",", " ", "\[IndentingNewLine]", 
+                  
+                  RowBox[{"k", " ", "=", " ", 
+                   RowBox[{"k", " ", "+", "3"}]}]}], "]"}]}], 
+               "\[IndentingNewLine]", "]"}]}], "]"}]}], "]"}]}], "]"}]}], 
+       "]"}]}], "]"}]}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", "i", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", "j", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", "k", "]"}]}], "Input",
+ CellChangeTimes->{{3.722788804912966*^9, 
+  3.722788834393949*^9}},ExpressionUUID->"83f40f07-4e32-405a-ac63-\
+c432c6f21276"]
+},
+WindowSize->{808, 684},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4755, 121, 621, "Input", "ExpressionUUID" -> \
+"83f40f07-4e32-405a-ac63-c432c6f21276"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
